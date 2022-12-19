@@ -1,0 +1,41 @@
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "walpackagetest"
+version = "1.2.2"
+authors = [
+  { name="waleed", email="mwzulfiqar@live.com" },
+]
+description = "testing package"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mwzulfiqar/packagetest/"
+"Bug Tracker" = "https://github.com/mwzulfiqar/packagetest/issues"
+
+[tool.black]
+line-length = 80
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | __pycache__
+)/
+'''
